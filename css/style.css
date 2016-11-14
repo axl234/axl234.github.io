@@ -584,7 +584,7 @@ header nav ul li a:hover {
   #main {
     margin: 2em 0 0;
     width: 75%;
-    float: right;
+    float: left;
     -webkit-transition: margin 0.5s ease-out;
     -moz-transition: margin 0.5s ease-out;
     transition: margin 0.5s ease-out;
@@ -1499,7 +1499,7 @@ section.comment {
     position: relative;
     float: left;
     width: 18%;
-    margin: 2em 3% 0 0;
+    margin: 2em 0 0 3%;
   }
 }
 .asidetitle {
