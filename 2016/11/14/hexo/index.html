@@ -11,7 +11,10 @@
   <meta name="description" content="1）注意需要提前安装一个扩展：
 $ npm install hexo-deployer-git –save
 2）如果出现下面这样的错误，
-Permission denied (publickey).fatal: Could not read from remote repository.Please make sure you have the correct access rightsand t">
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+an">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+github 博客搭建的几个坑">
 <meta property="og:url" content="https://axl234.github.io/2016/11/14/hexo/index.html">
@@ -19,14 +22,20 @@ Permission denied (publickey).fatal: Could not read from remote repository.Pleas
 <meta property="og:description" content="1）注意需要提前安装一个扩展：
 $ npm install hexo-deployer-git –save
 2）如果出现下面这样的错误，
-Permission denied (publickey).fatal: Could not read from remote repository.Please make sure you have the correct access rightsand t">
-<meta property="og:updated_time" content="2016-11-14T07:20:42.000Z">
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+an">
+<meta property="og:updated_time" content="2016-11-14T07:31:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+github 博客搭建的几个坑">
 <meta name="twitter:description" content="1）注意需要提前安装一个扩展：
 $ npm install hexo-deployer-git –save
 2）如果出现下面这样的错误，
-Permission denied (publickey).fatal: Could not read from remote repository.Please make sure you have the correct access rightsand t">
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+an">
   
     <link rel="alternative" href="/atom.xml" title="axl234 blog" type="application/atom+xml">
   
@@ -171,15 +180,23 @@ Permission denied (publickey).fatal: Could not read from remote repository.Pleas
         <p>1）注意需要提前安装一个扩展：</p>
 <p>$ npm install hexo-deployer-git –save</p>
 <p>2）如果出现下面这样的错误，</p>
-<p>Permission denied (publickey).<br>fatal: Could not read from remote repository.<br>Please make sure you have the correct access rights<br>and the repository exists.</p>
-<p>则是因为没有设置好public key所致，我查阅资料以后发现可以使用http的方式代替ssh，然后部署成功。</p>
+<pre><code>Permission denied (publickey).
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre><p>则是因为没有设置好public key所致，我查阅资料以后发现可以使用http的方式代替ssh，然后部署成功。</p>
 <p>3）生成博客的静态网页，并部署到 Github:</p>
-<p>$ hexo generate // 生成静态网页<br>在部署之前，还要配置下 Hexo 的服务器地址，打开 ~/MyBlog/_config.yml 在文件的最后面，找到并编辑以下的内容：</p>
-<p>deploy:<br>  type: github    ——&gt; 直接填写 github<br>  repository: <a href="https://github.com/axl234/axl234.github.io.git" target="_blank" rel="external">https://github.com/axl234/axl234.github.io.git</a>   —–&gt; Github 的仓库地址<br>  brach: master<br>保存，在终端运行以下部署命令：</p>
-<p>$ hexo deploy</p>
-<p>这样部署经常是不会立即生效的， 如果想要立即生效，可以使用下面的命令：</p>
-<p>$ hexo deploy -g</p>
-
+<pre><code>$ hexo generate // 生成静态网页
+</code></pre><p>在部署之前，还要配置下 Hexo 的服务器地址，打开 ~/MyBlog/_config.yml 在文件的最后面，找到并编辑以下的内容：</p>
+<pre><code>deploy:
+type: github    ------&gt; 直接填写 github
+repository: https://github.com/axl234/axl234.github.io.git   -----&gt; Github 的仓库地址
+brach: master
+</code></pre><p>保存，在终端运行以下部署命令：</p>
+<pre><code>$ hexo deploy
+</code></pre><p>这样部署经常是不会立即生效的， 如果想要立即生效，可以使用下面的命令：</p>
+<pre><code>$ hexo deploy -g
+</code></pre>
       
     </div>
     <div class="article-info article-info-index">
