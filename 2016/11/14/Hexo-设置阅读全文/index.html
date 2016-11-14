@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="axl234 blog">
 <meta property="og:description" content="这里介绍一下Hexo设置在首页显示一篇文章的简介，在简介后面提供一个链接阅读全文来进入文章的详情页。1:在文章中使用&amp;lt;!–more–&amp;gt; 手动进行截断这种方法可以根据文章的内容，自己在合适的位置添加&amp;lt;!–more–&amp;gt;标签，使用灵活，也是Hexo推荐的方法。
 2:在文章中的front-matter中添加description，并提供文章摘录这种方式只会在首页列表中显示文章的摘要">
-<meta property="og:updated_time" content="2016-11-14T08:41:10.000Z">
+<meta property="og:updated_time" content="2016-11-14T11:00:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo-设置阅读全文">
 <meta name="twitter:description" content="这里介绍一下Hexo设置在首页显示一篇文章的简介，在简介后面提供一个链接阅读全文来进入文章的详情页。1:在文章中使用&amp;lt;!–more–&amp;gt; 手动进行截断这种方法可以根据文章的内容，自己在合适的位置添加&amp;lt;!–more–&amp;gt;标签，使用灵活，也是Hexo推荐的方法。
@@ -169,10 +169,8 @@
           <p>这里介绍一下Hexo设置在首页显示一篇文章的简介，在简介后面提供一个链接阅读全文来进入文章的详情页。<br>1:在文章中使用&lt;!–more–&gt; 手动进行截断<br>这种方法可以根据文章的内容，自己在合适的位置添加&lt;!–more–&gt;标签，使用灵活，也是Hexo推荐的方法。</p>
 <p>2:在文章中的front-matter中添加description，并提供文章摘录<br>这种方式只会在首页列表中显示文章的摘要内容，进入文章详情后不会再显示。</p>
 <p>3:自动形成摘要，在主题配置文件中添加<br>默认截取的长度为 150 字符，可以根据需要自行设定</p>
-<pre><code>auto_excerpt:
-enable: true
-length: 150
-</code></pre><p>建议使用 &lt;!–more–&gt;（即第一种方式），除了可以精确控制需要显示的摘录内容以外， 这种方式也可以让 Hexo 中的插件更好的识别。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">auto_excerpt:</div><div class="line">enable: <span class="literal">true</span></div><div class="line">length: <span class="number">150</span></div></pre></td></tr></table></figure>
+<p>建议使用 &lt;!–more–&gt;（即第一种方式），除了可以精确控制需要显示的摘录内容以外， 这种方式也可以让 Hexo 中的插件更好的识别。</p>
 
         
       

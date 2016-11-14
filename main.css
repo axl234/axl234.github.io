@@ -257,7 +257,7 @@ html{height: 100%;overflow-x: hidden;overflow-y: auto}
 .article-entry .highlight figcaption a{float: right}
 .article-entry .highlight .gutter pre{text-align: right;padding-right: 20px}
 .article-entry .highlight .gutter pre .line{text-shadow: none}
-.article-entry .highlight .line{color: #fff}
+.article-entry .highlight .line{color: #657b83}
 .article-entry .gist{margin: 0 -20px;border-style: solid;border-color: #ddd;border-width: 1px 0;background: #272822;padding: 15px 20px 15px 0}
 .article-entry .gist .gist-file{border: none;font-family: Source Code Pro, Consolas, Monaco, Menlo, monospace;margin: 0}
 .article-entry .gist .gist-file .gist-data{background: none;border: none}
@@ -507,7 +507,8 @@ body.archive-inner .archive-article-date .icon-clock{margin: 0 8px 0 0}
 .article-entry strong{font-weight: 700}
 .article-entry .caption{display: block;font-size: .8em;color: #aaa}
 .article-entry hr{height: 0;margin-top: 20px;margin-bottom: 20px;border-left: 0;border-right: 0;border-top: 1px solid #ddd;border-bottom: 1px solid #fff}
-.article-entry pre{line-height: 1.5;margin-top: 10px;padding: 5px 15px;overflow-x: auto;color: #657b83;border: 1px solid #ccc;text-shadow: 0 1px #444;font-family: Menlo, Monaco, Andale Mono, lucida console, Courier New, monospace}
+.article-entry pre{line-height: 1.5;margin-top: 10px;padding: 5px 15px;overflow-x: auto;
+color: #657b83;border: 1px solid #ccc;font-family: Menlo, Monaco, Andale Mono, lucida console, Courier New, monospace}
 .article-entry pre code{font-size: 14px}
 .article-entry table{width: 100%;border: 1px solid #dedede;margin: 15px 0;border-collapse: collapse}
 .article-entry table td,
