@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://axl234.github.io">
+  <title>jQuery to Vue项目实践 | axl234 blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="jQuery和Vue的区别
+jQuery是使用选择器（$）选取DOM对象，对其进行赋值、取值、事件绑定等操作，其实和原生的HTML的区别只在于可以更方便的选取和操作DOM对象，而数据和界面是在一起的。比如需要获取label标签的内容：$(“lable”).val();,它还是依赖DOM元素的值。Vue则是通过Vue对象将数据和View完全分离开来了。对数据进行操作不再需要引用相应的DOM对象，可以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery to Vue项目实践">
+<meta property="og:url" content="https://axl234.github.io/2016/11/16/jQuery-to-Vue项目实践/index.html">
+<meta property="og:site_name" content="axl234 blog">
+<meta property="og:description" content="jQuery和Vue的区别
+jQuery是使用选择器（$）选取DOM对象，对其进行赋值、取值、事件绑定等操作，其实和原生的HTML的区别只在于可以更方便的选取和操作DOM对象，而数据和界面是在一起的。比如需要获取label标签的内容：$(“lable”).val();,它还是依赖DOM元素的值。Vue则是通过Vue对象将数据和View完全分离开来了。对数据进行操作不再需要引用相应的DOM对象，可以">
+<meta property="og:updated_time" content="2016-11-17T02:50:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery to Vue项目实践">
+<meta name="twitter:description" content="jQuery和Vue的区别
+jQuery是使用选择器（$）选取DOM对象，对其进行赋值、取值、事件绑定等操作，其实和原生的HTML的区别只在于可以更方便的选取和操作DOM对象，而数据和界面是在一起的。比如需要获取label标签的内容：$(“lable”).val();,它还是依赖DOM元素的值。Vue则是通过Vue对象将数据和View完全分离开来了。对数据进行操作不再需要引用相应的DOM对象，可以">
+  
+    <link rel="alternative" href="/atom.xml" title="axl234 blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="https://avatars1.githubusercontent.com/u/22144563?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">axl234</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="#" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">axl234</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="https://avatars1.githubusercontent.com/u/22144563?v=3&amp;s=460" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">axl234</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-jQuery-to-Vue项目实践" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery to Vue项目实践
+    </h1>
+  
+
+      </header>
+    
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        
+          <p>jQuery和Vue的区别</p>
+<p>jQuery是使用选择器（$）选取DOM对象，对其进行赋值、取值、事件绑定等操作，其实和原生的HTML的区别只在于可以更方便的选取和操作DOM对象，而数据和界面是在一起的。比如需要获取label标签的内容：$(“lable”).val();,它还是依赖DOM元素的值。<br>Vue则是通过Vue对象将数据和View完全分离开来了。对数据进行操作不再需要引用相应的DOM对象，可以说数据和View是分离的，他们通过Vue对象这个vm实现相互的绑定。这就是传说中的MVVM。</p>
+<p>jQuery to Vue</p>
+<ol>
+<li>导入Vue.js，去除jQuery。<br>下载Vue.js，导入工程,我将其放在头文件中。</li>
+</ol>
+<pre><code>&lt;script src=&quot;vue.js&quot;&gt;&lt;/script&gt;
+</code></pre><ol>
+<li>根视图id绑定为最外层的div标签定义id，然后使用Vue的el属性进行绑定<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div id="app"&gt;</div><div class="line">        &lt;h2&gt;学生信息登记&lt;/h2&gt;</div><div class="line">      </div><div class="line">        &lt;label&gt;&#123;&#123; result &#125;&#125;&lt;/label&gt;    </div><div class="line">&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    new Vue(&#123;</div><div class="line">        el: '#app'</div><div class="line">        &#125;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>3.属性将input标签的value值绑定到data的相应数据中。<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">    &lt;label&gt;姓名：&lt;/label&gt;</div><div class="line">    &lt;input type="text" placeholder="请输入姓名" v-model="name"&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div&gt;</div><div class="line">    &lt;label&gt;性别：&lt;/label&gt;</div><div class="line">    &lt;input id="sex01" type="radio" value="1" v-model="sex"&gt;</div><div class="line">    &lt;label for="sex01"&gt;男&lt;/label&gt;</div><div class="line">    &lt;input id="sex02" type="radio" value="2" v-model="sex"&gt;</div><div class="line">    &lt;label for="sex02"&gt;女&lt;/label&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div&gt;</div><div class="line">    &lt;label&gt;年龄：&lt;/label&gt;</div><div class="line">    &lt;select v-model="age"&gt;</div><div class="line">        &lt;option selected&gt;18&lt;/option&gt;</div><div class="line">        &lt;option&gt;19&lt;/option&gt;</div><div class="line">        &lt;option&gt;20&lt;/option&gt;</div><div class="line">        &lt;option&gt;21&lt;/option&gt;</div><div class="line">    &lt;/select&gt;&lt;/div&gt;&lt;div&gt;</div><div class="line">    &lt;label&gt;党员：&lt;/label&gt;</div><div class="line">    &lt;input type="checkbox" v-model="member"&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>注意上方的v-model，我们在Vue对象的data属性中绑定数据：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">    <span class="attr">el</span>: <span class="string">'#app'</span>,</div><div class="line">    <span class="attr">data</span>: &#123;</div><div class="line">        <span class="attr">name</span>: <span class="string">''</span>,</div><div class="line">        <span class="attr">sex</span>: <span class="string">''</span>,</div><div class="line">        <span class="attr">age</span>: <span class="string">''</span>,</div><div class="line">        <span class="attr">member</span>: <span class="string">''</span>,</div><div class="line">        <span class="attr">result</span>: <span class="string">''</span></div><div class="line">    &#125;,</div><div class="line">    ...</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>到这里就实现了将表单input框和数据的绑定。更多Vue表单绑定可以查看表单控件绑定</p>
+<ol>
+<li>删除id、name这些用于jQuery的属性<br>在使用jQuery时，在HTML中需要定义大量的id、name之类的属性用于jQuery选择器获取元素。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">"text"</span> placeholder=<span class="string">"请输入姓名"</span> id=<span class="string">"name"</span>&gt;</div><div class="line">...</div><div class="line">var name = $(<span class="string">'#name'</span>).val();</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>我们这里就不需要了。去除HTML中的这些属性。<br>（其实这里v-model和id的作用有些类似，都是一个桥梁作用。我在修改的时候偷懒直接将id改成v-model，后面的name不改~）</p>
+<ol>
+<li>将点击事件onclick改为v-on:click<br>Vue提供了v-on来监听DOM事件，如demo中的点击事件监听属性v-on:click。<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;button id="btnCommit" v-on:click="commit"&gt;提交&lt;/button&gt;</div><div class="line">&lt;button id="btnReset" v-on:click="reset"&gt;重置&lt;/button&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>然后在Vue对象的methods属性中创建这两个事件方法。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue (&#123;</div><div class="line">    ...</div><div class="line">    methods: &#123;</div><div class="line">        <span class="attr">commit</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;...&#125;,</div><div class="line">        <span class="attr">reset</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;...&#125;,</div><div class="line">    ...</div></pre></td></tr></table></figure></p>
+<p>另外，Vue还提供了其他v-on:属性，如v-on:change、v-on:keyup等。具体请看：方法与事件处理</p>
+<ol>
+<li>引用数据<br>作为MVVM，当然是双向绑定的。Vue用v-model属性使input可以修改数据内容，实现界面修改数据；使用双大括号来引用数据内容，实现数据修改界面。<br>具体写法如下：<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;label&gt;&#123;&#123; result &#125;&#125;&lt;/label&gt;</div><div class="line">...</div><div class="line">data: &#123;</div><div class="line">    result: 'hello world',</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如上引用后，数据hello world将会实时同步显示在labal标签上，每当result数据有所改变，label的内容立即会改变。</p>
+<ol>
+<li>替换ready方法<br>jQuery中为我们提供了一个document的ready方法，Vue中有ready属性，它们的触发时间差不多，具体要参考各自的生命周期。<br>jQuery写法：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    alert(<span class="string">"加载完成"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Vue写法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue (&#123;</div><div class="line">    ...</div><div class="line">    ready: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        alert(<span class="string">"加载完成"</span>);</div><div class="line">    &#125;,</div><div class="line">    ...</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>8.修改获取和修改元素属性的方式<br>这是jQuery和Vue的最大不同点了。先看代码:<br>jQuery:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = $(<span class="string">'#name'</span>).val();</div><div class="line"><span class="keyword">var</span> sex = <span class="string">''</span>;</div><div class="line"><span class="keyword">if</span> (getChackedValue(<span class="string">'input[name=sex]'</span>) == <span class="number">1</span>)&#123;</div><div class="line">    sex = <span class="string">'男'</span></div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (getChackedValue(<span class="string">'input[name=sex]'</span>) == <span class="number">2</span>)&#123;</div><div class="line">    sex = <span class="string">'女'</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> age = $(<span class="string">'#age'</span>).val();</div><div class="line"><span class="keyword">var</span> member = <span class="string">''</span>;</div><div class="line"><span class="keyword">if</span>($(<span class="string">'#member'</span>).is(<span class="string">':checked'</span>)) &#123;</div><div class="line">    member = <span class="string">'党员'</span>;</div><div class="line">&#125;<span class="keyword">else</span> &#123;</div><div class="line">    member = <span class="string">"非党员"</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> result = name + <span class="string">' '</span> + sex + <span class="string">' '</span> + age + <span class="string">' '</span> + member;</div><div class="line">$(<span class="string">'#result'</span>).text(result);</div></pre></td></tr></table></figure></p>
+<p>这是显示表单结果的函数。jQuery是通过美元符号$来获取指定元素，然后通过val()、text()等方法获取指定元素的内容或者为指定元素赋值。<br>Vue：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="keyword">this</span>.name;</div><div class="line"><span class="keyword">var</span> sex = <span class="string">''</span>;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">this</span>.sex == <span class="number">1</span>)&#123;</div><div class="line">    sex = <span class="string">'男'</span>;</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.sex == <span class="number">2</span>)&#123;</div><div class="line">    sex = <span class="string">'女'</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> age = <span class="keyword">this</span>.age;</div><div class="line"><span class="keyword">var</span> member = <span class="string">''</span>;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">this</span>.member)&#123;</div><div class="line">    member = <span class="string">'党员'</span>;</div><div class="line">&#125;<span class="keyword">else</span> &#123;</div><div class="line">    member = <span class="string">'非党员'</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> result = name + <span class="string">' '</span> + sex + <span class="string">' '</span> + age + <span class="string">' '</span> + member;</div><div class="line"><span class="keyword">this</span>.result = result;</div></pre></td></tr></table></figure></p>
+<p>同样是显示表单结果的函数。Vue不需要获取DOM元素，只需要获得和修改data对象中的数据就可以了。<br>这里需要注意的是：要用jQuery获得或者修改一组radio很麻烦，需要操作checked属性；而Vue处理radio只需通过数据，数据内容就是radio的value值，修改value值radio就会自动选择目标项。checkbox也是如此，jQuery要使用checked，而Vue只需要知道checkbox绑定的data为true或者false就可以知道checkbox是否被选中。</p>
+<ol>
+<li>Vue使用watch方法测试<br>Vue的watch方法真的挺好用，当程序出现问题时可以将出问题的data使用watch打log，每当该数据发生变化时，watch方法都会被触发。很好用~</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">watch: &#123;</div><div class="line">    <span class="string">'sex'</span>: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'oldVal = '</span> + oldVal + <span class="string">' val = '</span> + val);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>所有代码<br>jQueryPage<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line">    &lt;!DOCTYPE html&gt;</div><div class="line">    &lt;html lang="en"&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;meta charset="UTF-8"&gt;</div><div class="line">        &lt;title&gt;index&lt;/title&gt;</div><div class="line">        &lt;script src="jquery-2.2.3.js"&gt;&lt;/script&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;div&gt;</div><div class="line">            &lt;h2&gt;学生信息登记&lt;/h2&gt;</div><div class="line">            &lt;br&gt;</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;label&gt;姓名：&lt;/label&gt;</div><div class="line">                &lt;input type="text" placeholder="请输入姓名" id="name"&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;label&gt;性别：&lt;/label&gt;</div><div class="line">                &lt;input id="sex01" type="radio" value="1" name="sex"&gt;</div><div class="line">                &lt;label for="sex01"&gt;男&lt;/label&gt;</div><div class="line">                &lt;input id="sex02" type="radio" value="2" name="sex"&gt;</div><div class="line">                &lt;label for="sex02"&gt;女&lt;/label&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;label&gt;年龄：&lt;/label&gt;</div><div class="line">                &lt;select id="age"&gt;</div><div class="line">                    &lt;option selected&gt;18&lt;/option&gt;</div><div class="line">                    &lt;option&gt;19&lt;/option&gt;</div><div class="line">                    &lt;option&gt;20&lt;/option&gt;</div><div class="line">                    &lt;option&gt;21&lt;/option&gt;</div><div class="line">                &lt;/select&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;label&gt;党员：&lt;/label&gt;</div><div class="line">                &lt;input type="checkbox" id="member"&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;br&gt;</div><div class="line">            &lt;button id="btnCommit" onclick="commit()"&gt;提交&lt;/button&gt;</div><div class="line">            &lt;button id="btnReset" onclick="reset()"&gt;重置&lt;/button&gt;</div><div class="line">            &lt;br&gt;</div><div class="line">            &lt;br&gt;</div><div class="line">            &lt;label id="result"&gt;&lt;/label&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;script type="text/javascript"&gt;</div><div class="line">            $(document).ready(function () &#123;</div><div class="line">                alert("加载完成");</div><div class="line">            &#125;);</div><div class="line">            function commit() &#123;</div><div class="line">                var name = $('#name').val(); </div><div class="line">                var sex = '';</div><div class="line">                if (getChackedValue('input[name=sex]') == 1)&#123;</div><div class="line">                    sex = '男'</div><div class="line">                &#125;else if (getChackedValue('input[name=sex]') == 2)&#123;</div><div class="line">                    sex = '女'</div><div class="line">                &#125;</div><div class="line">                var age = $('#age').val();</div><div class="line">                var member = '';</div><div class="line">                if($('#member').is(':checked')) &#123;</div><div class="line">                    member = '党员';</div><div class="line">                &#125;else &#123;</div><div class="line">                    member = "非党员";</div><div class="line">                &#125;</div><div class="line">                var result = name + ' ' + sex + ' ' + age + ' ' + member;</div><div class="line">                $('#result').text(result);</div><div class="line">            &#125;</div><div class="line">            function reset() &#123;</div><div class="line">                $('#result').text('');</div><div class="line">            &#125;</div><div class="line">            function getChackedValue (CheckboxId) &#123;</div><div class="line">                var value = 0;</div><div class="line">                var i = 0;</div><div class="line">                $(CheckboxId).each(function () &#123;</div><div class="line">                    if($(CheckboxId).eq(i).is(':checked'))                &#123;</div><div class="line">                        value = $(CheckboxId).eq(i).val(); </div><div class="line">                       return;</div><div class="line">                    &#125;</div><div class="line">                    i++;</div><div class="line">                &#125;);</div><div class="line">                return value;</div><div class="line">            &#125;</div><div class="line">        &lt;/script&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>VuePage</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;</div><div class="line">    &lt;meta charset="UTF-8"&gt;</div><div class="line">    &lt;title&gt;index&lt;/title&gt;</div><div class="line">    &lt;script src="vue.js"&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id="app"&gt;</div><div class="line">        &lt;h2&gt;学生信息登记&lt;/h2&gt;</div><div class="line">        &lt;br&gt;</div><div class="line">        &lt;div&gt;</div><div class="line">            &lt;label&gt;姓名：&lt;/label&gt;</div><div class="line">            &lt;input type="text" placeholder="请输入姓名" v-model="name"&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div&gt;</div><div class="line">            &lt;label&gt;性别：&lt;/label&gt;</div><div class="line">            &lt;input id="sex01" type="radio" value="1" v-model="sex"&gt;</div><div class="line">            &lt;label for="sex01"&gt;男&lt;/label&gt;</div><div class="line">            &lt;input id="sex02" type="radio" value="2" v-model="sex"&gt;</div><div class="line">            &lt;label for="sex02"&gt;女&lt;/label&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div&gt;</div><div class="line">            &lt;label&gt;年龄：&lt;/label&gt;</div><div class="line">            &lt;select v-model="age"&gt;</div><div class="line">                &lt;option selected&gt;18&lt;/option&gt;</div><div class="line">                &lt;option&gt;19&lt;/option&gt;</div><div class="line">                &lt;option&gt;20&lt;/option&gt;</div><div class="line">                &lt;option&gt;21&lt;/option&gt;</div><div class="line">            &lt;/select&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div&gt;</div><div class="line">            &lt;label&gt;党员：&lt;/label&gt;</div><div class="line">            &lt;input type="checkbox" v-model="member"&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;br&gt;</div><div class="line">        &lt;button id="btnCommit" v-on:click="commit"&gt;提交&lt;/button&gt;</div><div class="line">        &lt;button id="btnReset" v-on:click="reset"&gt;重置&lt;/button&gt;</div><div class="line">        &lt;br&gt;</div><div class="line">        &lt;br&gt;</div><div class="line">        &lt;label&gt;&#123;&#123; result &#125;&#125;&lt;/label&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        new Vue(&#123;</div><div class="line">            el: '#app',</div><div class="line">            data: &#123;</div><div class="line">                name: '',</div><div class="line">                sex: '',</div><div class="line">                age: '',</div><div class="line">                member: '',</div><div class="line">                result: ''</div><div class="line">            &#125;, </div><div class="line">            ready: function () &#123;</div><div class="line">                alert("加载完成");</div><div class="line">            &#125;,</div><div class="line">            methods: &#123;</div><div class="line">                commit: function () &#123;</div><div class="line">                    var name = this.name;</div><div class="line">                    var sex = '';</div><div class="line">                    if (this.sex == 1)&#123;</div><div class="line">                        sex = '男';</div><div class="line">                    &#125;else if (this.sex == 2)&#123;</div><div class="line">                        sex = '女';</div><div class="line">                    &#125;</div><div class="line">                    var age = this.age;</div><div class="line">                    var member = '';</div><div class="line">                    if (this.member)&#123;</div><div class="line">                        member = '党员';</div><div class="line">                    &#125; else &#123;</div><div class="line">                        member = '非党员';</div><div class="line">                    &#125;</div><div class="line">                    var result = name + ' ' + sex + ' ' + age + ' ' + member;</div><div class="line">                    this.result = result;</div><div class="line">                &#125;,</div><div class="line">                reset: function () &#123;</div><div class="line">                    this.result = '';</div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            watch: &#123;</div><div class="line">                'sex': function (val, oldVal) &#123;</div><div class="line">                    console.log('oldVal = ' + oldVal + ' val = ' + val);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+
+        
+      
+    </div>
+
+
+
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/11/16/jQuery-to-Vue项目实践/" class="archive-article-date">
+  	<time datetime="2016-11-16T10:57:05.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-16</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/14/Hexo-设置阅读全文/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo-设置阅读全文</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 axl234
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/web-前端/" style="font-size: 10px;">web 前端</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">axl234&lt;br&gt;&lt;br&gt;欢迎来访，&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
