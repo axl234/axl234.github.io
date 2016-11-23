@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://axl234.github.io">
+  <title>一步一步征服 JavaScript 生态圈 | axl234 blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一步一步征服 JavaScript 生态圈的学习计划
+
+目标人群如果你是如下之一，那么本学习计划就是为你定制的：
+
+你已经熟悉了基础编程概念，比如变量和函数。你可能已经用诸如 PHP 和 Python 之类的语言做过后台的工作，并且可能为一些简单技巧用过诸如 jQuery 这种前端库。你现在想从事一些更正规的前端开发，但是在开始之前就被框架和库淹没。我们将讲解的事情一个现代 JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一步一步征服 JavaScript 生态圈">
+<meta property="og:url" content="https://axl234.github.io/2016/11/23/一步一步征服-JavaScript-生态圈/index.html">
+<meta property="og:site_name" content="axl234 blog">
+<meta property="og:description" content="一步一步征服 JavaScript 生态圈的学习计划
+
+目标人群如果你是如下之一，那么本学习计划就是为你定制的：
+
+你已经熟悉了基础编程概念，比如变量和函数。你可能已经用诸如 PHP 和 Python 之类的语言做过后台的工作，并且可能为一些简单技巧用过诸如 jQuery 这种前端库。你现在想从事一些更正规的前端开发，但是在开始之前就被框架和库淹没。我们将讲解的事情一个现代 JavaScript">
+<meta property="og:image" content="https://axl234.github.io/images/1.png">
+<meta property="og:image" content="https://axl234.github.io/images/2.png">
+<meta property="og:image" content="https://axl234.github.io/images/3.png">
+<meta property="og:image" content="https://axl234.github.io/images/4.png">
+<meta property="og:image" content="https://axl234.github.io/images/5.png">
+<meta property="og:image" content="https://axl234.github.io/images/g.gif">
+<meta property="og:image" content="https://axl234.github.io/images/7.png">
+<meta property="og:image" content="https://axl234.github.io/images/v.png">
+<meta property="og:updated_time" content="2016-11-23T08:49:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一步一步征服 JavaScript 生态圈">
+<meta name="twitter:description" content="一步一步征服 JavaScript 生态圈的学习计划
+
+目标人群如果你是如下之一，那么本学习计划就是为你定制的：
+
+你已经熟悉了基础编程概念，比如变量和函数。你可能已经用诸如 PHP 和 Python 之类的语言做过后台的工作，并且可能为一些简单技巧用过诸如 jQuery 这种前端库。你现在想从事一些更正规的前端开发，但是在开始之前就被框架和库淹没。我们将讲解的事情一个现代 JavaScript">
+<meta name="twitter:image" content="https://axl234.github.io/images/1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="axl234 blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="https://avatars1.githubusercontent.com/u/22144563?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">axl234</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="#" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">axl234</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="https://avatars1.githubusercontent.com/u/22144563?v=3&amp;s=460" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">axl234</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-一步一步征服-JavaScript-生态圈" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      一步一步征服 JavaScript 生态圈
+    </h1>
+  
+
+      </header>
+    
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        
+          <p>一步一步征服 JavaScript 生态圈的学习计划<br><img src="/images/1.png" alt=""></p>
+<ul>
+<li>目标人群<br>如果你是如下之一，那么本学习计划就是为你定制的：</li>
+</ul>
+<p>你已经熟悉了基础编程概念，比如变量和函数。<br>你可能已经用诸如 PHP 和 Python 之类的语言做过后台的工作，并且可能为一些简单技巧用过诸如 jQuery 这种前端库。<br>你现在想从事一些更正规的前端开发，但是在开始之前就被框架和库淹没。<br>我们将讲解的事情<br>一个现代 JavaScript Web 应用看起来像什么样子<br>为什么你不能只用 jQuery<br>为什么 React 是最安全的选择<br>为什么你也许不需要先“正确地学习 JavaScript“<br>如何学习 ES6 语法<br>为什么要以及如何学习 Redux<br>GraphQL 是什么以及为什么它是一个大事<br>之后该学什么<br>这里提到的资源<br>声明：本文将包含一些对 Wes Bos 所做课程的附属链接，但是我推荐他的素材是因为我真心认为不错，而不是为了推广。</p>
+<p>如果你想找其它资源，那么可以看看 Mark Erikson 维护的一份 React、ES6 和 Redux 的长长链接列表。</p>
+<ul>
+<li>此 JavaScript 非彼 JavaScript<br>在开始之前，我们需要确保我们谈论的是同一件事情。如果你搜索 “学习 JavaScript” 或者 “JavaScript 学习计划”，会找到大量教你如何学习 JavaScript 语言 的资源。</li>
+</ul>
+<p>但是这实际上是 简单的 部分。你肯定可以深入挖掘和学习这门语言中复杂的部分，然而事实是大多数 web 应用只用了相对简单的代码。换句话说，为编写 web 应用，你所需的 80% 知识通常只涉及标准 JavaScript 书的前几章。</p>
+<ul>
+<li><p>最难搞定的是掌握 JavaScript 生态圈，这个生态圈有不计其数的竞争性的框架和库。好消息是，这刚好是本学习计划关注的问题。</p>
+</li>
+<li><p>JavaScript 应用的构建单元<br>要理解为什么现代 JavaScript 应用好像如此复杂，你首先得理解它们的工作机制。</p>
+</li>
+</ul>
+<p>对于初学者，我们来看看大约在 2008 年的“传统” web 应用：<br><img src="/images/2.png" alt=""></p>
+<p>数据库发送数据给你的后台（比如你的 PHP 或者 Rails 应用）。<br>后台读取该数据，并输出 HTML。<br>HTML 被发送给浏览器，浏览器将其显示为 DOM（即，网页）<br>现在很多这种应用也会在客户端塞进一些 JavaScript 代码来添加交互性，比如标签和模态窗口。但是从本质上讲，浏览器依然是接收 HTML 并且从这里开始。</p>
+<p>现在把它与“现代” 2016年的 Web 应用（也称为”单页应用“）比较：<br><img src="/images/3.png" alt=""></p>
+<p>注意到区别没有？服务器现在是发送数据，而不是发送 HTML，并且“数据到HTML”转换步骤发生在客户端 (这也是为什么你要把数据与代码一起发送，告诉客户端如何执行所说的转换）。</p>
+<p>这有很多含义。首先，好的部分是：</p>
+<p>对于给定内容块，只发送数据比发送整个 HTML 页面更快。<br>客户端可以立即切换内容，而不需要像以前那样刷新浏览器窗口（这也是术语“单页应用”的由来）。<br>坏的部分是：</p>
+<p>首次加载更长，因为”数据到 HTML”代码库会变得很大。<br>你现在也需要一个地方来存储和管理客户端上的数据，从而方便缓存或者检查它。<br>而恶心的部分是：</p>
+<p>恭喜 - 你现在不得不处理客户端技术栈，这会变得跟服务器端技术栈一样复杂。<br>客户端-服务器光谱<br>那么，既然有这么多缺点，为什么要受这种罪呢？为什么不就沿袭过去 PHP 应用的老套路呢？</p>
+<p>好吧，假设你正在写一个计算器。如果用户想知道 2 + 2 是多少，那么当浏览器完全有能力做这种事情的时候，回到服务器执行这种操作然后再返回过来就很毫无意义了。</p>
+<p>另一方面，如果你只是创建一个纯静态网站，比如博客，那么直接在服务器上生成最终的 HTML 就挺合适的。</p>
+<p>事实是，大多数 web 应用介于光谱的中间地带。问题是要知道在哪里。</p>
+<p>但是关键的事情是 这个光谱是不连续的 ：你不能从一个纯服务器端应用开始，慢慢走向一个纯客户端应用。在某个点（分水线 divide），你会被强制停下来，重构所有东西，否则会以一大堆不可维护的意大利面条式的代码而告终。<br><img src="/images/4.png" alt=""></p>
+<p>这就是为什么你不应该不管做什么都只用 jQuery 的原因。你可以把 jQuery 当作是牛皮胶布。用它对付家里的小修小补还是很方便，但是如果你到处贴就很难看了。</p>
+<p>另一方面，现代 JavaScript 框架更像 3D 打印的一个替换零件：要花更长时间，但是结果是更干净更坚固。</p>
+<p>也就是说，掌握现代 JavaScript 技术栈是个赌注，不管从哪里开始，大多数 web 应用 可能 迟早都会出现在分水线的右边。所以，是的，要干的活更多了，但是有备无患更好。</p>
+<ul>
+<li>第 0 周: JavaScript 基础<br>除非你是一名纯后台开发者，否则你可能会了解点 JavaScript。当然，即使你不了解，如果你是一名 PHP 或者 Java 开发者，JavaScript 的类 C 语法也会看起来有点熟悉。</li>
+</ul>
+<p>但是如果 JavaScript 对你来说是完全摸不着头脑，也不要灰心。有很多免费资源在那，可以快速让你了解最新情况。比如，一个不错的出发点是 Codecademy 的 JavaScript 课。</p>
+<ul>
+<li>第 1 周: 从 React 开始<br>现在知道了基础 JavaScript 语法，而且你理解了为什么 Javascript 应用显得那么复杂，下面我们详谈。到底要从哪里开始呢？</li>
+</ul>
+<p>我相信答案是 React。<br><img src="/images/5.png" alt=""></p>
+<p>React 是一个由 Facebook 创建和开源的 UI 库。也就是说，它负责“数据到HTML”这一步（视图层）。</p>
+<p>现在不要误会我：我不是告诉你因为 React 是 最好 的库，所以要选它（因为这太主观了），而是因为它是 相当不错 。</p>
+<p>React 也许不是最流行的库，但是它是相当流行的。<br>React 也许不是最轻量级的库，但是它是相当轻量级的。<br>React 也许不是最容易学的，但是它是相当容易学的。<br>React 也许不是最优雅的库，但是它是相当优雅的。<br>也就是说，React 也许并非是所有情况的 最佳 选择，但是我相信它是最 安全 的。相信我，”就在你刚开始的时候”并不是承担技术选择风险的最佳时间。</p>
+<p>React 也会给你介绍一些有用的概念，比如组件、应用程序状态、无状态函数。不管在你职业生涯期间最终使用哪个框架或者库，这些概念都会被证明是有用的。</p>
+<p>最后，React 有一个很大的生态圈，这个生态圈还包括其它可以与 React 配合得很好的包和库。并且它的完全普及意味着你可以在 Stackoverflow 这类网站上找到很多帮助。</p>
+<p>我个人推荐 We Bos 的 React初学者课程。我自己就是看这个课程学的，而且它刚刚用最新的 React 最佳实践彻底修订过。</p>
+<p>你应该首先“正确地学习 JavaScript” 吗？<br>如果你是一个按部就班的学习者，你可能想在做其它事情之前很好地掌握 JavaScript 的基本原理。</p>
+<p>但是对于其它人来说，这就好像是学游泳的时候学习人体解剖学和流体动力学一样。确实，这二者都在游泳中起了很大的作用，但是跳到游泳池里会更好玩！</p>
+<p>这里没有正确或者错误的答案，一切都取决于你的学习方式。事实是，反正最基础的 React 教程可能会只用到 JavaScript 很小的一个子集，所以只关注你现在需要的，剩下的以后再说，这样会更好。</p>
+<p>这也适用于整个 JavaScript 生态圈。现在先不要对理解像 Webpack 或者 Babel 这些东西的来龙去脉操太多心。实际上 React 最近推出了它自己的小命令行工具，用这个工具你完全不需要构建任何配置，就可以创建应用。</p>
+<ul>
+<li>第 2 周: 你的第一个 React 项目<br>下面我们假设你刚完成了一个 React 课程。如果你跟我一样，那么两件事情可能是真的：</li>
+</ul>
+<p>你已经把你刚学的内容忘掉了一半。<br>你迫不及待要把你记得的一半用于实践。<br>我相信学习一个框架或者一门语言的最好方式是马上就用它。而个人项目是尝试新技术的完美时机。</p>
+<p>个人项目可以是任何东西，小到一个简单页面，大到一个复杂的 Web 应用，但是我认为重新设计你的个人网站可能是一个刚刚好。并且，我知道你可能已经把你的个人网站搁置多年了！</p>
+<p>我之前提到过，用单页应用模式开发静态内容确实有点大材小用，不过 React 实际上有一款秘密武器：Gatsby。这是一个 React 静态网站生成器，可以体验一下 React 的所有优点。<br><img src="/images/g.gif" alt=""></p>
+<p>使用 Gatsby 来上手 React 有如下几个好处：</p>
+<p>预先配置好的 Webpack，意味着你要省下来很多麻烦事。<br>基于目录结构自动生成路由。<br>所有 HTML 内容也是由服务器端生成的，所以你得到了两全其美的结果。<br>静态内容意味着不需要服务器，可以很简单的托管在 GitHub Pages上。<br>我就是用 Gatsby 搞定 State Of JavaScript 网站，完全不需要操心路由、构建工具的配置，以及服务器端渲染，为我节省了大把时间。</p>
+<ul>
+<li>第 3 周: 掌握 ES6<br>在我自己学习 React 的探索中，我很快就发现我可以很轻松地复制粘贴代码示例，但是有很多东西我仍然不懂。</li>
+</ul>
+<p>特别是，我对 ES6 引入的一些新功能不太熟悉，比如：</p>
+<p>箭头函数<br>对象解构<br>类<br>展开运算符<br>如果你处境相同，那么可能到了要花几天学习一下 ES6 的时候了。如果你喜欢 React 初学者课程，你可能想掏钱看看 Wes 的优秀视频 ES6 for Everybody。</p>
+<p>或者如果你喜欢免费资源的话，那就看看 Nicolas Bevacqua 的书《Practical ES6》。</p>
+<p>掌握 ES6 的一个好练习是翻一下较早的代码库（比如你在第一周创建的！），尽可能将代码转换为 ES6 的更短、更简洁的语法。</p>
+<ul>
+<li>第 4 周: 掌握状态管理<br>到了这里，你应该有能力创建一个支持静态内容的简单 React 前端了。</li>
+</ul>
+<p>但是真正的 Web 应用不会是静态的：它们需要从某个地方获取数据，通常是某种类型的数据库。</p>
+<p>现在你只能向一个组件发送数据，但是这很快会变得很糟糕。比如，如果两个组件需要显示同一块数据该怎么办？或者二者两个组件需要相互对话该怎么办？</p>
+<p>这就是状态管理起作用的地方。你可以把状态（换句话说，就是数据）存储到一个全局的仓库中，然后将其分发到你的 React 组件中，而不是一点一点存储在每个组件中：</p>
+<p>在 React 阵营中，最热门的状态管理库是 Redux。Redux 不仅可以帮助你集中管理数据，还可以对数据的操作制定严格的协议。</p>
+<p>可以地把 Redux 当作是一个银行：你不能到本地的分行，手动修改你的账户总额（“嘿，就让我多加几个零吧！”）。而是填写一个存款单，然后把它交给授权执行该操作的银行出纳员。</p>
+<p>同样，Redux 也不允许你直接修改全局状态。而是将 action 传递给 reducer。reducer 是一个特殊的函数，它执行修改状态的操作，返回新的更新了的状态为结果。</p>
+<p>所有这些额外工作带来的是整个应用中高度标准化和可维护的数据流，并且数据流可以通过访问 Redux Devtools 这类工具来可视化：</p>
+<p>你可以再次与我们的朋友 Wes 在一起，用他的 Redux 课程来学习 Redux，这套课程是完全免费的。</p>
+<p>或者，你可以用 Redux 的发明人 Dan Abramov 在 egghead.io 上的视频课程来学习。这套课程也是免费的。</p>
+<ul>
+<li>第 5 周: 用 GraphQL 创建 API<br>迄今为止，我们差不多只谈及了客户端，这只是等式的一半。即使你不需要完全掌握整个 Node 生态圈，也需要了解对于任何 Web 应用都很关键的一点：数据是如何从服务器到客户端的。</li>
+</ul>
+<p>毫不奇怪，这个环节也是快速变化的。此时，Facebook 的另一个开源项目 GraphQL 应运而生，成为传统 REST API 的一个重要替代物。<br><img src="/images/7.png" alt=""></p>
+<p>REST API 暴露多个 REST 路由，每个路由让你可以访问一个预定义的数据集（比如，/api/post、/api/comments 等等）。而 GraphQL 只暴露一个端点，让客户端可以通过这一个端点查询它所需的数据。</p>
+<p>就好像你要买很多东西，REST API 就是多次来回肉店、面包店、小卖部，而 GraphQL 就是给某人一个购物清单，然后把他送到这三个地方。</p>
+<p>当你需要查询多个数据源的时候，这种新策略就变得特别有意义了。就像购物清单示例一样，现在你可以用一个请求，从所有这些数据源获取数据。</p>
+<p>GraphQL 在过去一年左右的时间已经日益受欢迎，很多项目（比如我们第二周所用的 Gatsby）都在计划采用它。</p>
+<p>GraphQL 本身只是一个协议，但是目前它的最佳实现可能是 Apollo 库。这个库能与 Redux 很好地配合。有关 GraphSQL 和 Apollo 的教学材料依然很少，但是希望 Apollo 文档 能帮你开始。</p>
+<p>除了 React 及其生态圈外<br>我推荐你从 React 生态圈开始，是因为它是安全的选择。但是，它绝非是唯一有效的前端技术栈。如果你想继续探索的话，这里还有两个推荐：</p>
+<p>Vue</p>
+<p><img src="/images/v.png" alt="Vue"></p>
+<p>Vue 是一个相对比较新的库，但是它正以创记录的速度增长，而且已经被大公司采纳。特别在中国，它正被像百度和阿里巴巴（被认为是中国的谷歌和中国的亚马逊）这样的公司采用。并且它还是 PHP 框架 Laravel 的官方前端层。<br>与 React 相比，它的一些关键卖点是：</p>
+<p>官方维护的路由和状态管理库。<br>关注于性能。<br>较低的学习曲线（由于使用的是基于 HTML 的模板）。<br>较少的样板代码。<br>按照现在的情况，依然让 React 比 Vue 占优势的两个主要因素是 React 生态圈的大小，以及 React Native (稍后会详细介绍）。但是我会好不吃惊地看到 Vue 会很快赶上！</p>
+<p>Elm</p>
+<p>如果说 Vue 是更平易近人的选项，那么 Elm 就是更前沿的选项。Elm 不仅是一个框架，还是一个编译到 JavaScript 的全新语言。</p>
+<p>这带来不少优点，比如性能提升、强制语义版本控制以及无运行时异常。</p>
+<p>我本人还没有试过 Elm，但是我的朋友们都给我热烈推荐它。并且 Elm 用户通常看起来对它很满意（JavaScript 2016的概况调查中展示 Elm 有 84% 的满意度）。</p>
+<ul>
+<li>下一步<br>到这里你应该已经很好地掌握了整个 React 前端技术栈，并且有希望用它带来相当的产出。</li>
+</ul>
+<p>但是这并不意味着这就完事了！这只是 JavaScript 生态圈旅程的开端。你会逐渐遇到一些其它主题，包括：</p>
+<p>服务器端的 JavaScript (Node、Express…)<br>JavaScript 测试 (Jest、Enzyme…)<br>构建工具 (Webpack…)<br>类型系统 (TypeScript、Flow…)<br>处理 JavaScript 应用中的 CSS (CSS 模块、样式化的组件Styled Components…)<br>JavaScript 移动应用开发 (React Native…)<br>JavaScript 桌面应用开发 (Electron…)</p>
+
+        
+      
+    </div>
+
+
+
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/11/23/一步一步征服-JavaScript-生态圈/" class="archive-article-date">
+  	<time datetime="2016-11-23T08:18:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-23</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/16/jQuery-to-Vue项目实践/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery to Vue项目实践</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 axl234
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/web-前端/" style="font-size: 10px;">web 前端</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">axl234&lt;br&gt;&lt;br&gt;欢迎来访，&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
