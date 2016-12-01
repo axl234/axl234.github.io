@@ -18,7 +18,7 @@
 <meta property="og:description" content="ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015。
 虽然目前并不是所有浏览器都能兼容ES6全部特性，但越来越多的程序员在实际项目当中已经开始使用ES6了。所以就算你现在不打算使用ES6，但为了看懂别人的你也该懂点ES6的语法了…
 在我们正式讲解ES6语法之前，我们得先了解下Babel。">
-<meta property="og:updated_time" content="2016-12-01T07:21:26.000Z">
+<meta property="og:updated_time" content="2016-12-01T07:26:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用的ES6特性">
 <meta name="twitter:description" content="ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015。
@@ -171,8 +171,7 @@
         
           <p>ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015。</p>
 <p>虽然目前并不是所有浏览器都能兼容ES6全部特性，但越来越多的程序员在实际项目当中已经开始使用ES6了。所以就算你现在不打算使用ES6，但为了看懂别人的你也该懂点ES6的语法了…</p>
-<p>在我们正式讲解ES6语法之前，我们得先了解下Babel。<br>Babel</p>
-<p>Babel是一个广泛使用的ES6转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。大家可以选择自己习惯的工具来使用使用Babel，具体过程可直接在Babel官网查看：</p>
+<p>在我们正式讲解ES6语法之前，我们得先了解下Babel。Babel是一个广泛使用的ES6转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。大家可以选择自己习惯的工具来使用使用Babel，具体过程可直接在Babel官网查看：</p>
 <h2 id="最常用的ES6特性"><a href="#最常用的ES6特性" class="headerlink" title="最常用的ES6特性"></a>最常用的ES6特性</h2><p>let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments<br>这些是ES6最常用的几个语法，基本上学会它们，我们就可以走遍天下都不怕啦！我会用最通俗易懂的语言和例子来讲解它们，保证一看就懂，一学就会。</p>
 <h3 id="let-const"><a href="#let-const" class="headerlink" title="let, const"></a>let, const</h3><p>这两个的用途与var类似，都是用来声明变量的，但在实际运用中他俩都有各自的特殊用途。<br>首先来看下面这个例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">'zach'</span></div><div class="line"></div><div class="line"><span class="keyword">while</span> (<span class="literal">true</span>) &#123;</div><div class="line">    <span class="keyword">var</span> name = <span class="string">'obama'</span></div><div class="line">    <span class="built_in">console</span>.log(name)  <span class="comment">//obama</span></div><div class="line">    <span class="keyword">break</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(name)  <span class="comment">//obama</span></div></pre></td></tr></table></figure></p>
 <p>使用var 两次输出都是obama，这是因为ES5只有全局作用域和函数作用域，没有块级作用域，这带来很多不合理的场景。第一种场景就是你现在看到的内层变量覆盖外层变量。而let则实际上为JavaScript新增了块级作用域。用它所声明的变量，只在let命令所在的代码块内有效。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'zach'</span></div><div class="line"></div><div class="line"><span class="keyword">while</span> (<span class="literal">true</span>) &#123;</div><div class="line">    <span class="keyword">let</span> name = <span class="string">'obama'</span></div><div class="line">    <span class="built_in">console</span>.log(name)  <span class="comment">//obama</span></div><div class="line">    <span class="keyword">break</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(name)  <span class="comment">//zach</span></div></pre></td></tr></table></figure></p>
